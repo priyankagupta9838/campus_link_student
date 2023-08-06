@@ -18,13 +18,14 @@ class _StudentDashBoardState extends State<StudentDashBoard> {
     return Scaffold(
       appBar: AppBar(
 
-
+       iconTheme: const IconThemeData(color: Colors.white,),
         backgroundColor: Colors.deepPurple,
         title: AutoSizeText("Campus Link",
-          style: GoogleFonts.exo(
+          style: GoogleFonts.gfsDidot(
             fontWeight: FontWeight.w700,
             fontSize: size.height*0.033,
-            color: Colors.black,
+            color: Colors.white,
+
 
 
           ),
@@ -38,15 +39,34 @@ class _StudentDashBoardState extends State<StudentDashBoard> {
 
           padding: EdgeInsets.zero,
           children: <Widget>[
-            const UserAccountsDrawerHeader(
+             UserAccountsDrawerHeader(
+                    decoration:const BoxDecoration(
+                      gradient: LinearGradient(
 
-              accountName: Text("Priyanka Gupta"),
-              accountEmail: Text("gupta200priyanka@gmail.com"),
+                        begin: Alignment.topRight,
+
+                        end: Alignment.bottomLeft,
+                        colors: [
+                          Colors.black,
+
+                          Colors.blueAccent,
+                          Colors.purple,
+
+
+
+                        ],
+
+                      ),
+                    ) ,
+              accountName: const Text("Priyanka Gupta"),
+              accountEmail: const Text("gupta200priyanka@gmail.com"),
               currentAccountPicture: CircleAvatar(
-                // backgroundColor: Colors.transparent,
+                // backgroundColor: Colors.teal.shade300,
                 child: Text(
                   "P",
-                  style: TextStyle(fontSize: 40.0),
+                   style: GoogleFonts.exo(
+                fontSize: size.height*0.05,
+                    fontWeight: FontWeight.w600),
                 ),
               ),
             ),
@@ -93,46 +113,41 @@ class _StudentDashBoardState extends State<StudentDashBoard> {
 
                   Row(
                     children: [
-                      SizedBox(
+                       SizedBox(
                         width: size.width * 0.04,
+                      ),
+                      CircleAvatar(
+                        radius: 45,
+
+                         backgroundColor: Colors.teal,
+                        child: Text(
+                          "P",
+                          style: GoogleFonts.exo(
+                              fontSize: size.height*0.05,
+                              fontWeight: FontWeight.w600),
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          height: size.height * 0.1,
-                          width: size.width * 0.2,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/profile_icon.png"),
-                                fit: BoxFit.fill,
-
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            AutoSizeText("Welcome",
+                              style: GoogleFonts.exo(
+                                  fontSize: size.height*0.022,
+                                  fontWeight: FontWeight.w500,
+                              color: Colors.white,
+                              ),
                             ),
-                            // border: Border.all(
-                            //   width: 1,
-                            //   color: Colors.black,
-                            //
-                            // ),
-
-                          ),
-
+                             AutoSizeText("Priyanka Gupta",
+                               style: GoogleFonts.exo(
+                                   fontSize: size.height*0.03,
+                                   fontWeight: FontWeight.w500,
+                                 color: Colors.white
+                               ),
+                             ),
+                          ],
                         ),
-                      ),
-                      const Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(6.0),
-                            child: Text("Welcome",
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.white)),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(6.0),
-                            child: Text("Priyanka Gupta",
-                                style: TextStyle(
-                                    fontSize: 25, color: Colors.white)),
-                          ),
-                        ],
                       ),
                     ],
                   ),
@@ -158,55 +173,58 @@ class _StudentDashBoardState extends State<StudentDashBoard> {
                          onTap: () {},
                          child: Card(
                            elevation: 50,
-                           child: Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                             children: [
-                               Container(
-                                 height: size.height * 0.1,
-                                 width: size.width * 0.2,
-                                 decoration:    BoxDecoration(
-                                   image: const DecorationImage(
-                                     image: AssetImage(
-                                         "assets/images/attendance_icon.png"),
-                                     fit: BoxFit.fill,
+                           child: Padding(
+                             padding: const EdgeInsets.all(8.0),
+                             child: Row(
+                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                               children: [
+                                 Container(
+                                   height: size.height * 0.1,
+                                   width: size.width * 0.2,
+                                   decoration:    BoxDecoration(
+                                     image: const DecorationImage(
+                                       image: AssetImage(
+                                           "assets/images/attendance_icon.png"),
+                                       fit: BoxFit.fill,
 
+
+                                     ),
+                                    border: Border.all(
+                                      width: 1,
+                                      color: Colors.black,
+
+                                    ),
+                                     borderRadius: const BorderRadius.all(
+                                       Radius.circular(10),
+
+                                     ),
 
                                    ),
-                                  border: Border.all(
-                                    width: 1,
-                                    color: Colors.black,
-
-                                  ),
-                                   borderRadius: const BorderRadius.all(
-                                     Radius.circular(10),
-
-                                   ),
-
                                  ),
-                               ),
-                               Column(
-                                 mainAxisAlignment: MainAxisAlignment.center,
-                                 children: [
-                                   AutoSizeText(
-                                     "View Attendance",
-                                     style: GoogleFonts.exo(
-                                         fontSize: size.height*0.02,
-                                         fontWeight: FontWeight.w500),
-                                   ),
-                                   AutoSizeText(
-                                     "Click to See Your Attendance",
-                                     style: GoogleFonts.exo(
-                                         fontSize: size.height*0.01,
-                                         fontWeight: FontWeight.w400),
-                                   ),
-                                 ],
-                               ),
-                               IconButton(
-                                   onPressed: () {},
-                                   icon:
-                                       const Icon(Icons.arrow_forward_ios))
-                             ],
+                                 Column(
+                                   mainAxisAlignment: MainAxisAlignment.center,
+                                   children: [
+                                     AutoSizeText(
+                                       "View Attendance",
+                                       style: GoogleFonts.exo(
+                                           fontSize: size.height*0.02,
+                                           fontWeight: FontWeight.w500),
+                                     ),
+                                     AutoSizeText(
+                                       "Click to See Your Attendance",
+                                       style: GoogleFonts.exo(
+                                           fontSize: size.height*0.01,
+                                           fontWeight: FontWeight.w400),
+                                     ),
+                                   ],
+                                 ),
+                                 IconButton(
+                                     onPressed: () {},
+                                     icon:
+                                         const Icon(Icons.arrow_forward_ios))
+                               ],
 
+                             ),
                            ),
                          ),
                        ),
