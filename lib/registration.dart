@@ -771,36 +771,7 @@ class _TeacherDetailsState extends State<TeacherDetails> {
                                 //
                                 // ),
                               ),
-                              // suffixIcon: SizedBox(
-                              //   width: size.width*0.25,
-                              //   child: Row(
-                              //     mainAxisAlignment: MainAxisAlignment.end,
-                              //     children: [
-                              //       IconButton(onPressed: (){
-                              //         setState(() {
-                              //           //print(subjectlist[index].text.toString());
-                              //           //subjectlist.add(TextEditingController());
-                              //         });
-                              //       },
-                              //         icon: const Icon(Icons.add),
-                              //         color: Colors.amber,
-                              //         iconSize: size.height*0.04,
-                              //       ),
-                              //       IconButton(onPressed: (){
-                              //         setState(() {
-                              //           if(index!=0){
-                              //             //subjectlist.removeAt(index);
-                              //           }
-                              //         }
-                              //         );
-                              //       },
-                              //         icon: const Icon(Icons.delete),
-                              //         color: Colors.amber,
-                              //         iconSize: size.height*0.04,
-                              //       )
-                              //     ],
-                              //   ),
-                              // ),
+
 
                             ],
                           ),

@@ -1,9 +1,11 @@
 
 
 import 'package:campus_link_student/registration.dart';
+import 'package:campus_link_student/student_dashboard.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import 'attendence-view.dart';
 import 'login_page.dart';
 
 
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
       color: const Color.fromRGBO(213, 97, 132, 1),
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
-      home:   const TeacherDetails  (),
+      home:   StudentDashBoard(),
 
     );
   }
